@@ -1,0 +1,28 @@
+﻿<Window x:Class="wpf_yolov8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_ml"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <Button x:Name="LoadModelButton" Content="Load Model" Height="40" Margin="0, 0, 0, 10" Click="LoadModelButton_Click"/>
+            <Button x:Name="LoadImageButton" Content="Load Image" Height="40"  Margin="0, 0, 0, 10" Click="LoadImageButton_Click"/>
+            <Button x:Name="ProcessModelButton" Content="Process Model" Height="40"  Margin="0, 0, 0, 10" Click="ProcessModelButton_Click"/>
+        </StackPanel>
+
+        <Grid Grid.Column="1" x:Name="MainGrid">
+            <Image x:Name="MainImage"/>
+            <Grid x:Name="ResultGrid">
+                
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
