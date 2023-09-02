@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace wpf_yolov8
 {
@@ -16,6 +17,7 @@ namespace wpf_yolov8
         public static void LoadOnnxSession(string path)
         {
             session = new InferenceSession(path);
+            MessageBox.Show("Model Loaded : " + session.ToString());
         }
 
         public static List<float[]> RunOnnxSesion(Mat input)
